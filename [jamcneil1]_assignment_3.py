@@ -37,3 +37,27 @@ else:
 
   
 
+
+study = ["Programming", "Math", "English", "History"]
+print("Which class would you like to study:")
+study_choice = input("Choice selected: ")
+
+if study_choice in study:
+    if study_choice == "Programming":
+        current_gpa += 0.4
+        social_points -= 15
+        print("You chose a pretty hard subject twin, looks like you're not going outside lol")
+    elif study_choice == "Math":
+        current_gpa += 0.3
+        social_points -= 5
+        print("Are you a nerd or something?")
+    elif study_choice == "English" and current_gpa >= 3.0:
+        social_points += 10
+        print("'Perfectly balanced, as all things should be' - Thanos")
+    elif study_choice == "History" or (study_choice == "English" and current_gpa < 3.0):
+        current_gpa += 0.1
+        social_points += 7
+        print("I'm proud of you, keep up the good work!")
+        
+    else:
+        study_choice not in study, print("Invalid")
