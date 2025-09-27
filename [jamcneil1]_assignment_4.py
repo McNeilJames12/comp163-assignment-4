@@ -1,4 +1,4 @@
-#Step 1
+# Step 1
 
 student_name = "James McNeil"
 current_gpa = 4.0
@@ -13,7 +13,7 @@ print(f"Your study hours are at {study_hours}!")
 print(f"Your social points are at {social_points} points!")
 print(f"Your stress level is at {stress_level}.")
 
-#Step 2
+# Step 2
 
 light_course = "Baby food, you got it easy (12 credits)"
 standard_course = "Make sure you focus (15 credits)"
@@ -35,8 +35,7 @@ elif choice == "C":
 else:
   print("ERROR! Enter the correct letter that is equal to your perfered course option!")
 
-  
-
+# Step 3
 
 study = ["Programming", "Math", "English", "History"]
 print("Which class would you like to study:")
@@ -61,3 +60,29 @@ if study_choice in study:
         
     else:
         study_choice not in study, print("Invalid")
+
+# Step 4
+
+final_goal = input("What is your ultimate goal? ")
+
+if type(final_goal) is str:
+    print(f"Goal '{final_goal}'.")
+    if current_gpa > 4.2:
+        print("Twin you looking like you're ready for Harvard, I'm proud of you!")
+    elif current_gpa >= 3.8:
+        print("Okay then, you looking like a big nerd. Keep up the good work!")
+        if social_points > 90 and stress_level < 85:
+            print("You were locked in with your grades while keeping having fun and still keeping your mental health in check. The perfect semester!")
+        else:
+            print("Great grades but remember that you matter more twin. Go rest!")
+    else:
+        print("Your final GPA is below what we wanted. Next semester, focus on raising those study hours and lock in! Remember, the library is 24 hours!")
+
+elif type(final_goal) is not str:
+    print("Identity check: Goal input must be text.")
+
+print(f"Final GPA: {current_gpa:.2f}")
+print(f"Total Study Hours: {study_hours} hours")
+print(f"Total Social Points: {social_points} points")
+print(f"Final Stress Level: {stress_level}")
+print(f"Had fun with you twin, see you next time!")
